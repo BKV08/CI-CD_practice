@@ -1,0 +1,37 @@
+pipeline
+{
+    stages{
+
+        stage('checkout')
+        {
+
+            steps 
+            {
+
+                sh 'echo Done!!!'
+            }
+        }
+
+        stage('clone')
+        {
+            steps
+            {
+                sh git clone https://github.com/BKV08/Jenkins-Zero-To-Hero.git
+                sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app'
+                sh mvn clen install
+
+            }
+        }
+
+        stage('Final')
+        {
+            steps
+            {
+                sh 'pipeline completed'
+
+            }
+        }
+        
+        
+    }
+}
