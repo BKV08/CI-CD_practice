@@ -24,14 +24,12 @@ pipeline
             }
         }
 
-        stage('Final')
-        {
-            steps
-            {
-                sh 'pipeline completed'
+       post {
+           always {
+               echo ' pipeline completed '
 
-            }
-        }
+                  }
+             }
         
         
     }
