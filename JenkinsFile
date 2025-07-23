@@ -23,6 +23,7 @@ pipeline
 
             }
         }
+}
 
        post {
            always {
@@ -32,5 +33,5 @@ pipeline
              }
         
         
-    }
+    
 }
