@@ -17,9 +17,10 @@ pipeline
         {
             steps
             {
-                sh git clone https://github.com/BKV08/Jenkins-Zero-To-Hero.git
+                sh 'git clone https://github.com/BKV08/Jenkins-Zero-To-Hero.git'
+
                 sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app'
-                sh mvn clen install
+                sh 'mvn clen install'
 
             }
         }
