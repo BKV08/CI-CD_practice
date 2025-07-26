@@ -1,0 +1,5 @@
+FROM Ubuntu 
+WORKDIR /app
+COPY Claculator.java .
+RUN javac Claculator.java
+CMD ["java", "Claculator"]
